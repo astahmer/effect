@@ -1,5 +1,46 @@
 # effect
 
+## 4.0.0-rc.111
+
+### Patch Changes
+
+- [#7311](https://github.com/Effect-TS/effect/pull/7311) [`0ce3b00`](https://github.com/Effect-TS/effect/commit/0ce3b007531563ce33f94c6a057492d379cfd9e8) Thanks @fubhy! - Reject graph shortest-path calculations that overflow or underflow the finite number range.
+
+- [#7300](https://github.com/Effect-TS/effect/pull/7300) [`f93616f`](https://github.com/Effect-TS/effect/commit/f93616f31f42345af844b8396fb19259556ae236) Thanks @fubhy! - Fix graph index exhaustion, A* path consistency, snapshot validation, Mermaid line endings, and topological initials.
+
+- [#7336](https://github.com/Effect-TS/effect/pull/7336) [`16bf1ef`](https://github.com/Effect-TS/effect/commit/16bf1efdf41ba1d000b8588a8cc052a394856ba4) Thanks @gcanti! - Compact JSON Schema check constraints when they can be safely merged without keyword collisions.
+
+- [#7304](https://github.com/Effect-TS/effect/pull/7304) [`bc06292`](https://github.com/Effect-TS/effect/commit/bc062920ac47f956786d12c6d0bacb9468fa66e2) Thanks @fubhy! - Add graph snapshots, low-link connectivity analysis, bipartite matching, maximum flow, and minimum cut APIs.
+
+- [#7335](https://github.com/Effect-TS/effect/pull/7335) [`770c6d0`](https://github.com/Effect-TS/effect/commit/770c6d0f0ddcab7dbdde9fe701aded08deaee3fd) Thanks @tim-smart! - Fix `Effect.fn` binding the final transform as the generator body when using the `{ self }` overload.
+
+- [#7301](https://github.com/Effect-TS/effect/pull/7301) [`563815a`](https://github.com/Effect-TS/effect/commit/563815a250e10a02e2a719c7d9b159478b0da933) Thanks @fubhy! - Preserve depth-first traversal order with finite radii and validate A* heuristics for trivial paths.
+
+- [#7316](https://github.com/Effect-TS/effect/pull/7316) [`550a41a`](https://github.com/Effect-TS/effect/commit/550a41a2547ce0dd5f085f1637a6f8a5794acba7) Thanks @tim-smart! - Update dependencies across the Effect workspace.
+
+- [#7306](https://github.com/Effect-TS/effect/pull/7306) [`45d79c7`](https://github.com/Effect-TS/effect/commit/45d79c7cbd9c56c643361c6e6d1689f1aa62ae32) Thanks @fubhy! - Add bulk node and edge removal operations, and disallow graph mutations from callbacks that traverse or transform the same graph.
+
+- [#7317](https://github.com/Effect-TS/effect/pull/7317) [`aac8584`](https://github.com/Effect-TS/effect/commit/aac8584fd997f3ce3341aeb077b816219832de58) Thanks @tim-smart! - Fix `Match.value` terminal combinators failing to typecheck when the input
+  contains a generic type parameter.
+  
+  The fifth type argument of `Matcher` for value matchers is now `ValueFlavor`,
+  and `ValueMatcher` has a seventh flavor argument; update hand-written
+  annotations accordingly.
+
+- [#7326](https://github.com/Effect-TS/effect/pull/7326) [`425457c`](https://github.com/Effect-TS/effect/commit/425457c1e9eec7c176df130f7ec6ad3d616c086e) Thanks @tim-smart! - Emit mixed struct and record schema types as intersections, preventing optional
+  properties in open OpenAPI objects from conflicting with their index signature.
+
+- [#7324](https://github.com/Effect-TS/effect/pull/7324) [`008c423`](https://github.com/Effect-TS/effect/commit/008c423e413fe311085c4bfc07c19b9c70529dfa) Thanks @tim-smart! - Allow path-level common parameters in OpenAPI generator input types.
+
+- [#7328](https://github.com/Effect-TS/effect/pull/7328) [`859c02f`](https://github.com/Effect-TS/effect/commit/859c02fe9020b0f28f713aa85910a0cc2d002560) Thanks @fubhy! - Keep graph caches consistent during bulk removals and validate graph kinds at runtime.
+
+- [#7337](https://github.com/Effect-TS/effect/pull/7337) [`b19ccc7`](https://github.com/Effect-TS/effect/commit/b19ccc7325469a5dea091349bda4ae2ec00ec865) Thanks @gcanti! - Add `Schema.JsonObject` for readonly string-keyed records containing JSON-compatible values. This provides a canonical,
+  reusable schema instead of requiring callers to repeatedly compose `Schema.Record(Schema.String, Schema.Json)`.
+
+- [#7330](https://github.com/Effect-TS/effect/pull/7330) [`ff98f0b`](https://github.com/Effect-TS/effect/commit/ff98f0b0e2beb331209e37e42095d8d6e8e0b6c2) Thanks @gcanti! - Preserve JSON Schema object keyword scopes when importing `allOf` intersections, including closed empty objects and required-only keys. Emit intersecting index signatures without weakening their constraints, and reject object scope intersections that cannot be represented faithfully.
+
+- [#7305](https://github.com/Effect-TS/effect/pull/7305) [`c6c49c9`](https://github.com/Effect-TS/effect/commit/c6c49c96990d009341341a53ed26beb140c267a9) Thanks @fubhy! - Fix mutable graph cache consistency and guard weighted pathfinding against inconsistent snapshots and numeric overflow.
+
 ## 4.0.0-rc.110
 
 ### Patch Changes
